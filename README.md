@@ -3,6 +3,11 @@
 **eSmart Dash** is a smart, responsive dashboard that allows users to upload Excel files, visualize data with dynamic charts, receive AI-generated insights, preview data tables, and export reports — all in a sleek and user-friendly web interface.
 
 ---
+## 📝Team Members:-
+-Name:- Smruthi Jha, Rollno:- 2401730081, Course:- B.Tech cse(Ai&Ml),Section:-C
+-Name:- Ansh Kumar, Rollno:- 2401730126, Course:- B.Tech cse(Ai&Ml),Section:-C
+
+---
 
 ## 🚀 Features
 
