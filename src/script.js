@@ -43,17 +43,11 @@ function uploadFile() {
         }));
 
         uploadStatus.textContent = "File uploaded successfully!";
-        showChartTypeModal();
+        updateChart();
         generateAIInsights();
     };
 
     reader.readAsArrayBuffer(fileInput.files[0]);
-}
-
-// Show chart type selection modal
-function showChartTypeModal() {
-    const modal = document.getElementById("chartTypeModal");
-    if (modal) modal.style.display = "block";
 }
 
 // Render chart based on selected type
@@ -92,7 +86,6 @@ function updateChart() {
     });
 
     currentChartType = chartType;
-    document.getElementById("chartTypeModal").style.display = "none";
 }
 
 // Generate color for datasets
