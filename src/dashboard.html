@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSmart Dash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo1.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/3.9.0/tf.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="logo1.png" alt="eSmart Dash Logo" class="logo">
+        <h1>eSmart Dash <span>AI-Driven Analytics</span></h1>
+        <div id="clock" class="live-clock"></div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#upload">Upload</a></li>
+            <li><a href="#charts">Charts</a></li>
+            <li><a href="#insights">AI Insights</a></li>
+            <li><a href="#report">Export PDF</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Upload Section -->
+        <section id="upload" class="card">
+            <h2>Upload Excel File</h2>
+            <input type="file" id="fileInput" accept=".xlsx, .xls">
+            <button onclick="uploadFile()">Upload</button>
+            <p id="uploadStatus">Awaiting upload...</p>
+        </section>
+
+        <!-- Chart Section -->
+        <section id="charts" class="card">
+            <h2>Visualize Data</h2>
+            <div class="chart-controls">
+                <label for="chartType">Chart Type:</label>
+                <select id="chartType" onchange="updateChart()">
+                    <option value="bar">Bar</option>
+                    <option value="line">Line</option>
+                    <option value="pie">Pie</option>
+                    <option value="doughnut">Doughnut</option>
+                </select>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="chartCanvas"></canvas>
+            </div>
+        </section>
+
+        <!-- AI Insights -->
+        <section id="insights" class="card">
+            <h2>AI-Based Insights</h2>
+            <p id="aiInsights">Upload data to see patterns...</p>
+            <div id="trendPrediction"></div>
+        </section>
+
+        <!-- Report Generation -->
+        <section id="report" class="card">
+            <h2>Download Report</h2>
+            <button onclick="generateReport()">Export to PDF</button>
+        </section>
+        <button onclick="openChartModal()">Choose Chart Type</button>
+
+        <div id="chartModal" style="display:none;">
+            <select id="chartTypeSelect">
+            <option value="bar">Bar</option>
+            <option value="line">Line</option>
+            <option value="pie">Pie</option>
+            <option value="doughnut">Doughnut</option>
+            <option value="radar">Radar</option>
+        </select>
+        <button onclick="generateChart()">Generate Chart</button>
+        </div>
+
+    <canvas id="myChart"></canvas>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 eSmart Dash | Empowering Data-Driven Decisions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
