@@ -49,3 +49,7 @@ This project is licensed under the MIT License.
 👨‍💻 Author
 Ansh – @Anshkr
 From K.R. Mangalam University, based in Gurgaon | BTech CSE (AI & ML)
+
+👨‍💻 Co- Author
+Smruthi- @smruthijha
+From K.R. Mangalam University, based in Gurgaon | BTech CSE (AI & ML)
